@@ -1,0 +1,57 @@
+# ==================================================
+# Aliases
+# ==================================================
+alias cdd='cd ~/Documents'
+alias cdh='cd ~'
+alias ..='cd ..'
+alias d='docker'
+alias dc='docker compose'
+alias ll='ls -l'
+alias p='pnpm'
+alias nui='npx npm-check --update'
+alias pui='pnpm upgrade -i --latest'
+alias g='cd $(ghq list -p | fzf)'
+alias cc='code $HOME/.claude'
+alias gr='git reset --soft HEAD^'
+
+# ==================================================
+# Environment variables
+# ==================================================
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="/usr/local/opt/libpq/bin:$PATH"
+# Homebrewで指定したパッケージのインストールを禁止（miseなどのバージョン管理ツールで管理するため）
+export HOMEBREW_FORBIDDEN_FORMULAE="node python python3 pip npm pnpm yarn bun claude"
+
+
+# ==================================================
+# External tool initialization
+# ==================================================
+
+# Docker Desktop (official)
+source ~/.docker/init-zsh.sh || true
+
+# fzf (official)
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# mise (official)d
+eval "$(mise activate zsh)"
+
+# bun completions (official)
+[ -s ~/.bun/_bun ] && source ~/.bun/_bun
+
+
+# ==================================================
+# Completion paths
+# ==================================================
+fpath=(
+  ~/.zfunc
+  ~/.docker/completions
+  $fpath
+)
+
+
+# ==================================================
+# zsh completion system
+# ==================================================
+autoload -Uz compinit
+compinit

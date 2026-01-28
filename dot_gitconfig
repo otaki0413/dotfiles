@@ -1,0 +1,58 @@
+################################################################################
+##
+##     ██████╗ ██╗████████╗ ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗
+##    ██╔════╝ ██║╚══██╔══╝██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝
+##    ██║  ███╗██║   ██║   ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗
+##    ██║   ██║██║   ██║   ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║
+##    ╚██████╔╝██║   ██║   ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝
+##     ╚═════╝ ╚═╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝
+##
+################################################################################
+[user]
+	name = otaki
+	email = otaki0413.it@gmail.com
+
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RF
+	compression = 9
+
+[init]
+	defaultBranch = main
+
+[help]
+	autocorrect = prompt
+
+[commit]
+	verbose = true
+
+[diff]
+	algorithm = histogram
+
+[interactive]
+	diffFilter = diff-so-fancy --patch
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[branch]
+	sort = -committerdate
+
+[tag]
+	sort = version:refname
+
+[column]
+	ui = auto
+
+[maintenance]
+	auto = true
+	strategy = incremental
+
+[alias]
+	s = status
+	br = branch
+	co = commit
+	graph = log --all --graph --decorate --oneline
+	l = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
