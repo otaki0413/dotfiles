@@ -1,0 +1,88 @@
+{
+  "version": 3,
+  "lines": [
+    [
+      {
+        "id": "039f86d4-a717-44f7-b16a-241d03189441",
+        "type": "custom-command",
+        "color": "black",
+        "commandPath": "pwd | sed \"s|$HOME|~|\""
+      },
+      {
+        "id": "a1ab1b60-5a05-448d-b564-541a1471da6c",
+        "type": "separator"
+      },
+      {
+        "id": "e9a0e638-7a2d-4d22-912f-26d803d5da88",
+        "type": "git-branch"
+      },
+      {
+        "id": "0e69a8b9-87f7-4d4b-9b88-ea5f5032236f",
+        "type": "separator"
+      },
+      {
+        "id": "c875abb1-e94b-47a5-8a2a-79b488848fbd",
+        "type": "git-changes"
+      }
+    ],
+    [
+      {
+        "id": "1",
+        "type": "model",
+        "color": "red"
+      },
+      {
+        "id": "2",
+        "type": "separator"
+      },
+      {
+        "id": "59f384e8-e1f0-45c5-ba8f-21b3e0b36364",
+        "type": "context-percentage",
+        "color": "blue"
+      },
+      {
+        "id": "5ca62c25-7bf1-46ae-89b4-ebb31c9596ba",
+        "type": "separator"
+      },
+      {
+        "id": "3",
+        "type": "tokens-input",
+        "color": ""
+      },
+      {
+        "id": "4",
+        "type": "separator"
+      },
+      {
+        "id": "6dd1b2ca-072a-457f-9e0f-7fe71a002e96",
+        "type": "tokens-output",
+        "color": "black"
+      },
+      {
+        "id": "8a007aec-789c-4717-903b-4cd11fa59c5e",
+        "type": "separator"
+      },
+      {
+        "id": "a28ab123-9348-4640-9967-f001e172c1c2",
+        "type": "tokens-cached"
+      }
+    ]
+  ],
+  "flexMode": "full-minus-40",
+  "compactThreshold": 60,
+  "colorLevel": 2,
+  "inheritSeparatorColors": false,
+  "globalBold": false,
+  "powerline": {
+    "enabled": false,
+    "separators": [
+      ""
+    ],
+    "separatorInvertBackground": [
+      false
+    ],
+    "startCaps": [],
+    "endCaps": [],
+    "autoAlign": false
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [],
+    "deny": [
+      "Bash(sudo:*)",
+      "Bash(rm -rf:*)",
+      "Read(.env*)",
+      "Read(id_rsa)",
+      "Read(id_rsa*)",
+      "Read(id_ed25519)",
+      "Read(**/*key*)",
+      "Read(**/.ssh/**)",
+      "Write(.env*)",
+      "Write(**/secrets/**)",
+      "Write(**/.ssh/**)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm remove:*)",
+      "Bash(psql:*)",
+      "Bash(mysql:*)",
+      "Bash(mongod:*)"
+    ],
+    "ask": [
+      "Bash(rm:*)",
+      "Bash(curl:*)",
+      "Bash(chmod +x:*)",
+      "Bash(git commit:*)",
+      "Bash(git branch:*)",
+      "Bash(git merge:*)",
+      "Bash(git stash:*)",
+      "Bash(git fetch:*)",
+      "Bash(git push:*)",
+      "Bash(git pull:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)",
+      "Bash(git tag:*)",
+      "Bash(npm publish:*)"
+    ]
+  },
+  "language": "日本語",
+  "statusLine": {
+    "type": "command",
+    "command": "bunx -y ccstatusline@latest",
+    "padding": 0
+  }
+}
