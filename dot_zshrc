@@ -30,7 +30,6 @@ export PATH
 
 
 # Tools
-source ~/.docker/init-zsh.sh || true
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(mise activate zsh)"
 
@@ -38,7 +37,6 @@ eval "$(mise activate zsh)"
 # Completion
 fpath=(
   ~/.zfunc
-  ~/.docker/completions
   $fpath
 )
 
