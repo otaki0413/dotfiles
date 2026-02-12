@@ -1,4 +1,7 @@
 {
+  "env": {
+    "ENABLE_TOOL_SEARCH": "true"
+  },
   "permissions": {
     "allow": [],
     "deny": [
@@ -36,17 +39,38 @@
       "Bash(npm publish:*)"
     ]
   },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -title 'Claude Code' --subtitle '確認まち' -message 'Claude Codeが許可を求めています' -sound Glass"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "terminal-notifier -title 'Claude Code' -subtitle '処理終了' -message 'タスクが完了しました' -sound Hero"
+          }
+        ]
+      }
+    ]
+  },
   "statusLine": {
     "type": "command",
     "command": "bunx -y ccstatusline@latest",
     "padding": 0
   },
   "enabledPlugins": {
-    "code-simplifier@claude-plugins-official": true,
-    "example-skills@anthropic-agent-skills": true
+    "code-simplifier@claude-plugins-official": true
   },
-  "env": {
-    "ENABLE_TOOL_SEARCH": "true"
-  },
+  "plansDirectory": "./.claude/plans",
   "language": "日本語"
 }
