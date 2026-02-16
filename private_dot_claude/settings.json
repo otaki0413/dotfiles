@@ -1,7 +1,4 @@
 {
-  "env": {
-    "ENABLE_TOOL_SEARCH": "true"
-  },
   "permissions": {
     "allow": [],
     "deny": [
@@ -65,12 +62,12 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "bunx -y ccstatusline@latest",
+    "command": "bun x ccusage statusline",
     "padding": 0
   },
   "enabledPlugins": {
     "code-simplifier@claude-plugins-official": true
   },
-  "plansDirectory": "./.claude/plans",
-  "language": "日本語"
+  "language": "日本語",
+  "plansDirectory": "./plans"
 }
