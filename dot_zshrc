@@ -16,6 +16,7 @@ alias gr='git reset --soft HEAD^'
 # Env
 export BUN_INSTALL="$HOME/.bun"
 export HOMEBREW_FORBIDDEN_FORMULAE="node python python3 pip npm pnpm yarn bun claude"
+export CARAPACE_BRIDGES='zsh,fish,bash,inshellisense'
 
 
 # PATH Setting（zsh style）
@@ -30,7 +31,6 @@ export PATH
 
 
 # Tools
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 eval "$(mise activate zsh)"
 
 
@@ -42,3 +42,13 @@ fpath=(
 
 autoload -Uz compinit
 compinit
+
+zstyle ':completion:*' format $'\e[2;37mCompleting %d\e[m'
+source <(carapace _carapace)
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

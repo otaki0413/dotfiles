@@ -13,16 +13,19 @@ adjust-cell-height = 2
 
 # --- Theme and Colors ---
 # Catppuccin with automatic light/dark switching
-theme = light:Catppuccin Latte,dark:Catppuccin Mocha
+# theme = "Solarized Dark Patched"
+theme = "Catppuccin Mocha"
 
 # --- Window and Appearance ---
 background-opacity = 0.9
 background-blur-radius = 20
-macos-titlebar-style = transparent
+background-blur-radius = 20
+macos-titlebar-style = tabs
 window-padding-x = 10
 window-padding-y = 8
 window-save-state = always
 window-theme = dark
+
 
 # --- Cursor ---
 cursor-style = bar
@@ -43,6 +46,8 @@ quick-terminal-animation-duration = 0.15
 # --- Security ---
 clipboard-paste-protection = true
 clipboard-paste-bracketed-safe = true
+quit-after-last-window-closed = true
+confirm-close-surface = true
 
 # --- Shell Integration ---
 shell-integration = detect
