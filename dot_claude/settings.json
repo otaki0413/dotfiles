@@ -17,12 +17,17 @@
       "Bash(npm remove:*)",
       "Bash(psql:*)",
       "Bash(mysql:*)",
-      "Bash(mongod:*)"
+      "Bash(mongod:*)",
+      "Bash(wrangler deploy:*)",
+      "Bash(wrangler pages:*)",
+      "Bash(npx wrangler deploy:*)",
+      "Bash(npx wrangler pages:*)"
     ],
     "ask": [
       "Bash(rm:*)",
       "Bash(curl:*)",
       "Bash(chmod +x:*)",
+      "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(git branch:*)",
       "Bash(git merge:*)",
@@ -66,7 +71,8 @@
     "padding": 0
   },
   "enabledPlugins": {
-    "code-simplifier@claude-plugins-official": true
+    "skill-creator@claude-plugins-official": true,
+    "superpowers@superpowers-marketplace": true
   },
   "language": "日本語",
   "plansDirectory": "./plans"
