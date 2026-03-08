@@ -29,7 +29,6 @@
       "Bash(chmod +x:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
-      "Bash(git branch:*)",
       "Bash(git merge:*)",
       "Bash(git stash:*)",
       "Bash(git fetch:*)",
@@ -41,30 +40,6 @@
       "Bash(npm publish:*)"
     ]
   },
-  "hooks": {
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "terminal-notifier -title 'Claude Code' --subtitle '確認まち' -message 'Claude Codeが許可を求めています' -sound Glass"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "terminal-notifier -title 'Claude Code' -subtitle '処理終了' -message 'タスクが完了しました' -sound Hero"
-          }
-        ]
-      }
-    ]
-  },
   "statusLine": {
     "type": "command",
     "command": "bunx ccstatusline@latest",
@@ -72,8 +47,11 @@
   },
   "enabledPlugins": {
     "skill-creator@claude-plugins-official": true,
-    "superpowers@superpowers-marketplace": true
+    "superpowers@superpowers-marketplace": true,
+    "frontend-design@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true,
+    "commit-commands@claude-plugins-official": true
   },
   "language": "日本語",
-  "plansDirectory": "./plans"
+  "model": "opus"
 }

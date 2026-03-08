@@ -1,6 +1,5 @@
 # Aliases
 alias cdd='cd ~/Documents'
-alias cdh='cd ~'
 alias ..='cd ..'
 alias d='docker'
 alias dc='docker compose'
@@ -9,8 +8,8 @@ alias p='pnpm'
 alias nui='npx npm-check --update'
 alias pui='pnpm upgrade -i --latest'
 alias g='cd $(ghq list -p | fzf)'
-alias cc='code $HOME/.claude'
 alias gr='git reset --soft HEAD^'
+alias cl='claude'
 
 
 # Env
